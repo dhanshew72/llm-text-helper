@@ -16,6 +16,7 @@ class UploadService:
 
     def upload(self, file_path):
         text_path = self._convert_pdf(file_path)
+        print(text_path)
         embeddings = OpenAIEmbeddings()
         loader = TextLoader(text_path)
         documents = loader.load()

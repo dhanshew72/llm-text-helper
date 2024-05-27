@@ -7,5 +7,5 @@ dev-env: clean
 clean:
 	rm -rf .venv
 
-run:
+run-local:
 	$(ACTIVATE_VENV); fastapi dev src/routes.py

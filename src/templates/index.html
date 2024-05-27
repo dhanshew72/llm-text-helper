@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Text Helper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .file-input {
+            display: none;
+        }
+        .button-primary {
+            font-size: 1.5em;
+            background-color: #33C3F0;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .button-primary:hover {
+            background-color: #1EAEDB;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the LLM Text helper</h1>
+        <form id="upload-form" method="post" enctype="multipart/form-data" action="/upload">
+            <label for="file-upload" class="button-primary">Select PDF File</label>
+            <input type="file" id="file-upload" class="file-input" name="file" required>
+            <input type="number" id="start" class="page-input" name="start" placeholder="Starting Page #">
+            <input type="number" id="end" class="page-input" name="end" placeholder="Ending Page #">
+            <input type="hidden" id="user" name="user" value="test123">
+            <button type="submit" class="button-primary">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
